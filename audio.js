@@ -1,6 +1,6 @@
 var audio = new Audio();
-audio.src = 'naive.mp3';
-audio.controls = true;
+audio.src = 'tlom.mp3';
+audio.controls = false;
 audio.loop = true;
 audio.autoplay = true;
 
@@ -27,7 +27,6 @@ function frameLooper(){
       bigger = fqcArray[i];
     }
   }
-  document.getElementById('big').innerHTML = bigger;
 }
 
 

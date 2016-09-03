@@ -7,6 +7,19 @@ function getRandomColor() {
   }
   return color;
 }
+function checkEffect(item) {
+  if (!item) {
+    for (var i = 0; i < elems.length; i++) {
+      elems[i].parentElement.setAttribute('class', 'NOFX grid__item');
+    }
+  }
+  else {
+    for (var i = 0; i < elems.length; i++) {
+      elems[i].parentElement.setAttribute('class', item.value+" grid__item");
+    }
+  }
+}
+var elems = document.getElementsByClassName('grid__item__inside');
 var perRow =15;
 var rows = 10;
 var elemSize = (document.getElementById("container").offsetWidth)/perRow;
@@ -26,13 +39,12 @@ for (var i = 0; i < rows; i++) {
     div.appendChild(insideDiv);
   }
 }
+checkEffect();
 genGrid();
+
 function genGrid() {
-  var elems = document.getElementsByClassName('grid__item__inside');
   for(var i = 0; i < elems.length; i++) {
       elems[i].style.backgroundColor = getRandomColor();
   }
-
-
   setTimeout(genGrid, 2000);
 }

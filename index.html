@@ -8,9 +8,11 @@
   <body>
     <div class="container" id="container">
       <div class="audio_box" id="audio_box"></div>
-      <div id="big">
-
-      </div>
+      <form action="">
+        <input type="radio" name="effect" checked="checked" value="NOFX" onClick="checkEffect(this)"> No effect
+        <input type="radio" name="effect" value="rotate" onClick="checkEffect(this)"> Rotate
+        <input type="radio" name="effect" value="skew" onClick="checkEffect(this)"> Skew (Don't do that)
+    </form>
     </div>
     <script src="base.js" charset="utf-8"></script>
     <script src="audio.js" charset="utf-8"></script>

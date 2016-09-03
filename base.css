@@ -4,6 +4,7 @@ body {
   margin: 0;
   background-color: black;
   overflow: hidden;
+  color: white;
 }
 * {
   box-sizing: border-box;
@@ -18,23 +19,41 @@ body {
   width: 100%;
 }
 /*ANIMATIONS*/
-@-webkit-keyframes border_move {
-  0%   {transform: scale(1);}
-  50%  {transform: scale(70);}
-  100%  {transform: scale(1);}
+@-webkit-keyframes rotate_anim {
+  0%   {transform: rotate(0deg);}
+  50%  {transform: rotate(180deg);}
+  100%  {transform: rotate(360deg);}
 }
-@keyframes border_move {
-  0%   {transform: scale(1);}
-  50%  {transform: scale(70);}
-  100%  {transform: scale(1);}
+@keyframes rotate_anim {
+  0%   {transform: rotate(0deg);}
+  50%  {transform: rotate(180deg);}
+  100%  {transform: rotate(360deg);}
 }
+@-webkit-keyframes skew_anim {
+  0%   {transform: skew(0deg);}
+  50%  {transform: skew(180deg);}
+  100%  {transform: skew(360deg);}
+}
+@keyframes skew_anim {
+  0%   {transform: skew(0deg);}
+  50%  {transform: skew(180deg);}
+  100%  {transform: skew(360deg);}
+}
+
+.rotate {
+  animation: rotate_anim linear infinite 3s;
+  -webkit-animation: rotate_anim linear infinite 3s;
+}
+.skew {
+  animation: skew_anim linear infinite 3s;
+  -webkit-animation: skew_anim linear infinite 3s;
+}
+
 .grid__item {
   display: inline-block;
   position: relative;;
 }
 .grid__item__inside {
-  //animation: border_move infinite;
-  //-webkit-animation: border_move infinite;
   transition: background-color 2s;
   position: absolute;
   left: 0;
