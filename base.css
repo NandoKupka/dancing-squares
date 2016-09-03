@@ -1,0 +1,48 @@
+
+/*BASIC SETTINGS*/
+body {
+  margin: 0;
+  background-color: black;
+  overflow: hidden;
+}
+* {
+  box-sizing: border-box;
+}
+#container {
+  max-width: 100%;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+}
+.row {
+  width: 100%;
+}
+/*ANIMATIONS*/
+@-webkit-keyframes border_move {
+  0%   {transform: scale(1);}
+  50%  {transform: scale(70);}
+  100%  {transform: scale(1);}
+}
+@keyframes border_move {
+  0%   {transform: scale(1);}
+  50%  {transform: scale(70);}
+  100%  {transform: scale(1);}
+}
+.grid__item {
+  display: inline-block;
+  position: relative;;
+}
+.grid__item__inside {
+  //animation: border_move infinite;
+  //-webkit-animation: border_move infinite;
+  transition: background-color 2s;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 2px;
+  width: 2px;
+  background-color: red;
+}
